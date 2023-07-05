@@ -1,6 +1,4 @@
-// import java.beans.Statement;
-// import java.sql.Connection;
-// import java.sql.DriverManager;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -12,28 +10,15 @@ public class App {
     static List<produtos> armazena = new ArrayList<>();
     public static void main(String[] args) throws Exception {
 
-        // String url = "jdbc:mysql://localhost:3306/";
-        // String user = "root";
-        // String senha = "0910";
-        // String nomeBancoDados = "Produtos";
-
-        // try {
-        //     Connection connection = DriverManager.getConnection(url , user , senha);
-        //     Statement statement = connection.createStatement();
-        //     String sqlCriaBanco = "CREATE DATABASE IF NOT EXISTS " + nomeBancoDados + "DEFAULT CHARACTER SET 'utf8mb4' DEFAULT COLLATE utf8mb4_general_ci" ;
-        //     statement.executeUpdate(sqlCriaBanco);
-        //     System.out.println("Banco de dados criado com sucesso");
-        //     statement.close();
-        //     connection.close();
-        // }
-        // catch (SQLException e){
-        //     e.printStackTrace();
-        // }
-        // List <String> nomes = new ArrayList<>();
-        // List <Integer> quantidades = new ArrayList<>();
-        // List <Double> valores = new ArrayList<>();
-        // List <String> tipos = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
+        produtos novoProduto = new produtos();
+        double valorItem = 0.0;
+        int quantidadeItem = 0 ;
+        double totalCompra = 0;
+        double valorOpcao = 0;
+        double quantidades = 0;
+        double valor = 0;
+
         while (true) {
             String titular = titulo("Cadrastro de produto", 50) ;
             String linha = "=".repeat(50);
@@ -42,33 +27,28 @@ public class App {
             System.out.println("[2]Ver produto cadastrado");
             System.out.println("[3]Sair");
             System.out.println(linha);
-
-            System.out.print("Sua opção: ");
-            int valorOpcao = scanner.nextInt();
+            valorOpcao = verificaNumero("Sua opção: ",valorOpcao);
+            limpaTerminal();
             if (valorOpcao == 1){
- 
+                String mostraProduto = titulo("Novo produto",50);
+                System.out.println(mostraProduto);
                 System.out.print("Nome do produto: ");
                 String nomeProduto = scanner.next();
-                // nomes.add(nomeProduto);
-
-                System.out.print("Quantidade: ");
-                Integer quantidades = scanner.nextInt();
-                // quantidades.add(quantidade);
-
-                System.out.print("Valor:R$ ");
-                Double valor = scanner.nextDouble();
-                // valores.add(valor);
+                quantidades = verificaNumero("Digite a quantidade: ", quantidades);
+                valor = verificaNumero("valor R$ ", valor);
 
                 System.out.print("Tipo: ");
                 String tipos = scanner.next();
-                // tipos.add(tipo);
-                produtos novoProduto = new produtos();
+
                 novoProduto.produto = nomeProduto;
                 novoProduto.quantidade = quantidades;
                 novoProduto.saldo = valor;
                 novoProduto.tipo = tipos;
-
-                armazena.add(novoProduto);   
+                
+                armazena.add(novoProduto); 
+                    totalCompra += valor;
+                    quantidadeItem += quantidades;
+                limpaTerminal();
             }else if ( valorOpcao == 2){
                 if (armazena.isEmpty()){
                     System.out.println("Ainda não possue produtos cadastrados!");
@@ -76,16 +56,23 @@ public class App {
                     String mostraProduto = titulo("Produtos", 50);
                     System.out.println(mostraProduto);
                     for ( produtos produto : armazena){
-                        System.out.println("nome " + produto.produto);
-                        System.out.println("Quantidade " +produto.quantidade);
-                        System.out.println("Valor " + produto.saldo);
-                        System.out.println("tipo " + produto.tipo);
+                        System.out.println("nome: " + produto.produto);
+                        System.out.println("Quantidade: " +produto.quantidade);
+                        System.out.println("Valor: " + produto.saldo);
+                        System.out.println("tipo: " + produto.tipo);
+                        System.out.println("total: " + valorItem);
                         System.out.println();
+                    }
+
+                    System.out.println("Você comprou o total de " + quantidadeItem + "itens");
+                    System.out.println("O total a pagar é de R$" + totalCompra);
+
                     }
                     System.out.println(linha);
                 }
-            }else if ( valorOpcao == 3){
+            else if ( valorOpcao == 3){
                 break;
+
 
             }else{
                 System.out.println("Por favor imforme uma opção valida");
@@ -97,6 +84,44 @@ public class App {
         String linha = "=".repeat(numero);
         return linha + "\n" + mensagem  + "\n" + linha ;
     }
-}
+
+    public static double verificaNumero(String mensagen , double numero){
+        boolean digitaNumero = false;
+        Scanner scanner = new Scanner(System.in);
+        while (!digitaNumero){
+            System.out.print(mensagen);
+            if (scanner.hasNextInt()){
+                numero = scanner.nextInt();
+                digitaNumero = true;
+            }else{
+                System.out.println("Você não digitou um numero");
+                scanner.nextLine();
+                }}
+         
+            
+        return numero;
+    }
+    public static void limpaTerminal(){
+        try {
+            String os = System.getProperty("os.name").toLowerCase();
+            ProcessBuilder processBuilder;
+            
+            if (os.contains("win")){
+                processBuilder = new ProcessBuilder("cmd"," /c ","cls");
+
+            }else{
+                processBuilder = new ProcessBuilder("clear");
+            }
+
+            Process process = processBuilder.inheritIO().start();
+            process.waitFor();
+        } catch (Exception e) {
+            e.printStackTrace();
+            
+        }
+    }
+
+    }
+
 
 
