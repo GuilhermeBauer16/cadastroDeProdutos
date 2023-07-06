@@ -16,6 +16,10 @@ Este foi o meu primeiro projeto feito em Java , já havia realizado projetos em 
 
 * adição de produtos:Com essa funcionalidade o usuário poderá adicionar seu produtos divido entre.
 
-  * nome
+  * Nome:O usuário poderá adicionar o nome do produto.
 
-  *
+  * Quantidade:O usuário poderá adicionar a quantidade de produtos .
+
+  * Valor:O usuário poderá adicionar o valor produto em R$.
+
+  * Tipo :O usuário poderá adicionar o tipo do produto.
