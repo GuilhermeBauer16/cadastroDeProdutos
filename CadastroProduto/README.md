@@ -10,4 +10,4 @@ O objetivo desse projeto foi desenvolver um sistema de cadastro de produtos onde
 
 ## Aprendizado
 
-Este foi o meu primeiro projeto feito em Java , já havia realizado projetos em Python mas a orientação a objetos da Java foi
+Este foi o meu primeiro projeto feito em Java , já havia realizado projetos em Python mas a orientação a objetos e as class do Java foi um desafio para mim , além da sintaxe e a declaração de variáveis coisas que em Python não havia , mas no geral consegui entender e fortalecer minha lógica de como o Java funciona.
