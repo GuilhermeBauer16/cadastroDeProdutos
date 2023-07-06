@@ -6,6 +6,7 @@ O objetivo desse projeto foi desenvolver um sistema de cadastro de produtos onde
 
 ## Exemplo de funcionamento
 
+![image](https://github.com/GuilhermeBauer16/cadastroDeProdutos/assets/123701893/0970f264-71e0-4aad-821a-62527693356f)
 
 
 ## Aprendizado
