@@ -39,3 +39,7 @@ Este foi o meu primeiro projeto feito em Java , já havia realizado projetos em 
   * Quantidade de produtos: o usuário poderá visualizar a quantidade total de produtos cadastrados.
 
   * Total pago : O usuário poderá ver o total pago em todos os produtos.
+
+## Autor 
+
+ www.linkedin.com/in/guilherme-bauer-desenvolvedor
