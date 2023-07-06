@@ -24,7 +24,17 @@ Este foi o meu primeiro projeto feito em Java , já havia realizado projetos em 
 
   * Tipo : O usuário poderá adicionar o tipo do produto.
 
-* Visualização de produtos: Com essa funcionalidade o usuário poderá visualizar todos os produtos cadastrados dividos entre , nome , quantidade, valor. tipo e também poderá visualizar:
+* Visualização de produtos: Com essa funcionalidade o usuário poderá visualizar todos os produtos cadastrados dividos entre:
+
+  * Nome do produto.
+
+  * Quantidade.
+
+  * Valor(R$).
+
+  * Tipo. 
+
+*Também poderá visualizar:
 
   * Quantidade de produtos: o usuário poderá visualizar a quantidade total de produtos cadastrados.
 
