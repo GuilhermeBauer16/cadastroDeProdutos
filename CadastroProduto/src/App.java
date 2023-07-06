@@ -65,7 +65,7 @@ public class App {
                     }
 
                     System.out.println("Você comprou o total de " + quantidadeItem + "itens");
-                    System.out.println("O total a pagar é de R$" + totalCompra);
+                    System.out.println("O total a gasto é de R$" + totalCompra);
 
                     }
                     System.out.println(linha);
