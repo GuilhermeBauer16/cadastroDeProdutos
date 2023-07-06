@@ -11,7 +11,7 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         Scanner scanner = new Scanner(System.in);
-        produtos novoProduto = new produtos();
+        
         double valorItem = 0.0;
         int quantidadeItem = 0 ;
         double totalCompra = 0;
@@ -39,7 +39,7 @@ public class App {
 
                 System.out.print("Tipo: ");
                 String tipos = scanner.next();
-
+                produtos novoProduto = new produtos();
                 novoProduto.produto = nomeProduto;
                 novoProduto.quantidade = quantidades;
                 novoProduto.saldo = valor;
