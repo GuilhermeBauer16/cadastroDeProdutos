@@ -34,7 +34,7 @@ Este foi o meu primeiro projeto feito em Java , já havia realizado projetos em 
 
   * Tipo. 
 
-*Também poderá visualizar:
+* Também poderá visualizar:
 
   * Quantidade de produtos: o usuário poderá visualizar a quantidade total de produtos cadastrados.
 
