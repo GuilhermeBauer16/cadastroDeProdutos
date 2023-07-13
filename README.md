@@ -4,7 +4,7 @@
 
 O objetivo desse projeto foi desenvolver um sistema de cadastro de produtos onde o usuário poderá armazenar seus produtos dividido entre nome do produto, quantidade , valor R$ , tipo. Também terá a possibilidade de visualizar seus produtos a quantidade e quanto foi gasto.
 
-## Exemplo de funcionamento
+## Exemplo de funcionamento.  
 
 ![image](https://github.com/GuilhermeBauer16/cadastroDeProdutos/assets/123701893/0970f264-71e0-4aad-821a-62527693356f)
 
