@@ -10,7 +10,7 @@ O objetivo desse projeto foi desenvolver um sistema de cadastro de produtos onde
 
 https://github.com/GuilhermeBauer16/cadastroDeProdutos/assets/123701893/9df6715a-fdfc-4c2d-96bf-9b6bb8e0dc0a
 
-## Aprendizado
+## Aprendizado.  
 
 Este foi o meu primeiro projeto feito em Java , já havia realizado projetos em Python mas a orientação a objetos e as class do Java foi um desafio para mim , além da sintaxe e a declaração de variáveis coisas que em Python não havia , mas no geral consegui entender e fortalecer minha lógica de como o Java funciona.
 
